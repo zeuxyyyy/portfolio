@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- 🔹 Aurora Background -->
+    <div class="aurora-bg"></div>
+
+    <!-- 🔹 Navigation Bar -->
+    <nav>
+        <h2>My Business</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Hero Section -->
+    <section class="hero" id="home">
+        <h1>We Build Stunning Websites</h1>
+        <p>Professional & high-end designs that make an impact.</p>
+        <button class="btn">Get Started</button>
+    </section>
+
+    <!-- 🔹 Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <div class="service-inner">
+                    <div class="service-front">Web Development</div>
+                    <div class="service-back">We create stunning, responsive websites!</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-inner">
+                    <div class="service-front">UI/UX Design</div>
+                    <div class="service-back">We design visually appealing interfaces.</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-inner">
+                    <div class="service-front">SEO Optimization</div>
+                    <div class="service-back">Rank higher on Google with us!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="/contact" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
